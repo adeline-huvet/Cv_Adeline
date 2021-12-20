@@ -10,10 +10,12 @@ import 'vue-flipper/dist/vue-flipper.css';
 import Flipper from 'vue-flipper';
 
 
+
 Vue.config.productionTip = false
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
 Vue.component('flipper', Flipper);
+
 
 new Vue({
   router,
