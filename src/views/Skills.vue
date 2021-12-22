@@ -3,7 +3,7 @@
     <h1>Skills</h1>
     <div class="all-card">
       <div v-for="skill in skills" v-bind:key="skill.id" class="card-item">
-      <div class="title">
+      <div class="the-title">
         <p class="title">{{skill.title}}</p>
       </div>
       <div class="body-card">
@@ -65,5 +65,8 @@ export default {
 .title{
   margin-left: 20%;
 
+}
+.Javascript{
+  color: pink;
 }
 </style>
