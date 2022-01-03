@@ -1,101 +1,99 @@
 <template>
-    <div class="about">
-        <h2 class="who-title">Who's that Pokemon ?</h2>
-      <div class="flipped-card">
-        <flipper
-          width="250px"
-          height="380px"
-          :flipped="!flipped"
-          @click="onClick"
-          class="card"
-        >
-          <div slot="front" class="front-face">
-            <div class="para">
-              <p>Adibou</p>
-              <p>pv : 150 <i class="fab fa-vuejs vue-icon"></i></p>
-            </div>
-            <div>
-              <img
-                class="img-profile"
-                src="http://www.avatarsinpixels.com/minipix/eyJIYWlyTG93ZXIiOiI1IiwiTW91dGgiOiI2IiwiUGFudHMiOiIxIiwiVG9wIjoiMTIiLCJHbGFzc2VzIjoiMyIsImhhaXJUb25lIjoiZmZlMTZjIn0=/1/show.png"
-              />
-              </div>
-              <div class="soft-skills">
-                <p class="humour">
-                  Humour :
-                  <li class="laught-emoji">
-                    <i class="far fa-grin-squint-tears"></i>
-                    <i class="far fa-grin-squint-tears"></i>
-                    <i class="far fa-grin-squint-tears"></i>
-                  </li>
-                <p/>
+  <div class="about">
+    <h2 class="who-title">Who's that Pokemon ?</h2>
+    <div class="flipped-card">
+      <flipper
+        width="250px"
+        height="380px"
+        :flipped="!flipped"
+        @click="onClick"
+        class="card"
+      >
 
-                <p />
-                <p />
-                <p class="motivation">
-                  Motivation :
-                  <li class="smile-emoji">
-                    <i class="far fa-hand-pointer"></i>
-                    <i class="far fa-hand-pointer"></i>
-                    <i class="far fa-hand-pointer"></i>
-                    <i class="far fa-hand-pointer"></i>
-                  </li>
-                <p/>
-
-                <p />
-                <p />
-                <p class="team-play">
-                  Teamplay :
-                  <li class="hand-emoji">
-                    <i class="far fa-handshake"></i
-                    ><i class="far fa-handshake"></i
-                    ><i class="far fa-handshake"></i
-                    ><i class="far fa-handshake"></i>
-                  </li>
-                <p/>
-
-                <p />
-                <p />
-              </div>
-              <hr />
-              <div class="card-descript">
-                Pokémon de type junior qui serai ravis de vous rejoindre pour
-                plus projet. Idéal contre la team rocket.
-              </div>
-            <!-- </div> -->
+        <div slot="front" class="front-face">
+          <div class="para">
+            <p>Adibou</p>
+            <p>pv : 150 <i class="fab fa-vuejs vue-icon"></i></p>
           </div>
-          <div slot="back" class="back-face">
-            <span class="click-me">Click me !</span>
-            <img src="../../public/images/Pokeball.svg" class="pokeball" />
+
+          <div>
+            <img
+              class="img-profile"
+              src="http://www.avatarsinpixels.com/minipix/eyJIYWlyTG93ZXIiOiI1IiwiTW91dGgiOiI2IiwiUGFudHMiOiIxIiwiVG9wIjoiMTIiLCJHbGFzc2VzIjoiMyIsImhhaXJUb25lIjoiZmZlMTZjIn0=/1/show.png"
+            />
           </div>
-        </flipper>
-        <div class="glitch-box" v-if="flipped">
-          <Glitch text="Would you like to continue ?" color="tomato"></Glitch>
+
+          <div class="soft-skills">
+            <p class="humour">
+              Humour :
+              <li class="laught-emoji">
+                <i class="far fa-grin-squint-tears"></i>
+                <i class="far fa-grin-squint-tears"></i>
+                <i class="far fa-grin-squint-tears"></i>
+              </li>
+            <p/>
+
+            <p class="motivation">
+              Motivation :
+              <li class="smile-emoji">
+                <i class="far fa-hand-pointer"></i>
+                <i class="far fa-hand-pointer"></i>
+                <i class="far fa-hand-pointer"></i>
+                <i class="far fa-hand-pointer"></i>
+              </li>
+            <p/>
+
+            <p class="team-play">
+              Teamplay :
+              <li class="hand-emoji">
+                <i class="far fa-handshake"></i><i class="far fa-handshake"></i
+                ><i class="far fa-handshake"></i
+                ><i class="far fa-handshake"></i>
+              </li>
+            <p/>
+
+          </div>
+          <hr />
+          <div class="card-descript">
+            Pokémon de type junior qui serai ravis de vous rejoindre pour plus
+            projet. Idéal contre la team rocket.
+          </div>
+
         </div>
-        <div class="yes-glitch" v-if="flipped">
-          <a href="#about-me"><Glitch text="Yes" color="steelblue"></Glitch></a>
+        <div slot="back" class="back-face">
+          <span class="click-me">Click me !</span>
+          <img src="../../public/images/Pokeball.svg" class="pokeball" />
         </div>
-        <div class="no-glitch" v-if="flipped">
-          <Glitch text="No" color="steelblue"></Glitch>
-        </div>
+      </flipper>
+
+      <div class="glitch-box" v-if="flipped">
+        <Glitch text="Would you like to continue ?" color="tomato"></Glitch>
       </div>
 
+      <div class="yes-glitch" v-if="flipped">
+        <a href="#about-me"><Glitch text="Yes" color="steelblue"></Glitch></a>
+      </div>
 
-      <div class="me" id="about-me" v-if="flipped">
-        <div class="box" id="type-writer">
-          <div class="show">
-            <ParcoursTitre v-if="count === 0"></ParcoursTitre>
-            <ParcoursP1 v-if="count === 1" class="parcours-p1"></ParcoursP1>
-            <ParcoursP2 v-if="count === 2"></ParcoursP2>
-            <MoiTitle v-if="count === 3"></MoiTitle>
-            <MoiP1 v-if="count === 4"></MoiP1>
-            <MoiP2 v-if="count === 5"></MoiP2>
-          </div>
-          <i @click="nextText"></i>
+      <div class="no-glitch" v-if="flipped">
+        <Glitch text="No" color="steelblue"></Glitch>
+      </div>
+
+    </div>
+
+    <div class="me" id="about-me" v-if="flipped">
+      <div class="box" id="type-writer">
+        <div class="show">
+          <ParcoursTitre v-if="count === 0"></ParcoursTitre>
+          <ParcoursP1 v-if="count === 1" class="parcours-p1"></ParcoursP1>
+          <ParcoursP2 v-if="count === 2"></ParcoursP2>
+          <MoiTitle v-if="count === 3"></MoiTitle>
+          <MoiP1 v-if="count === 4"></MoiP1>
+          <MoiP2 v-if="count === 5"></MoiP2>
         </div>
-
+        <i @click="nextText"></i>
       </div>
     </div>
+  </div>
 </template>
 
 <script>
@@ -118,13 +116,13 @@ export default {
     ParcoursTitre,
     MoiTitle,
     MoiP1,
-    MoiP2,
+    MoiP2
   },
 
   data() {
     return {
       flipped: false,
-      count: 0,
+      count: 0
     };
   },
   methods: {
@@ -138,46 +136,47 @@ export default {
       }
 
       console.log(this.count);
-    },
-  },
+    }
+  }
 };
 </script>
 <style scoped>
-
+/* container principal */
 .about {
+  margin-top: 50px;
   display: flex;
-  flex-direction : column-reverse;
+  flex-direction: column;
   flex-wrap: wrap;
-  gap: 50px;
-  /* align-items: center; */
   justify-content: center;
-  min-height: 800px;
-   background-color: #ff7605;
 }
 
 .who-title {
   font-family: "Italiana", serif;
   align-items: center;
-  margin-top: -60%;
+  /* margin-top: 50px; */
 }
+/* contenu card animé */
+.flipped-card {
+  margin-top: 50px;
+  display: flex;
+}
+
 .Flipper {
-  position: absolute;
+  position: relative;
   margin-left: 40%;
-  margin-top: 0%;
+  margin-bottom: 60px;
   border-radius: 15px;
   box-shadow: 10px 5px 5px rgb(163, 163, 163);
   transition: all 1s ease-out;
 }
 
 .Flipper:hover {
-  margin-left: 40%;
-  margin-top: 0%;
-  border-radius: 15px;
-  box-shadow: 10px 5px 5px rgb(163, 163, 163);
   transform: scale(1.1, 1.1);
   transition: all 1s ease-in;
   opacity: 80%;
 }
+
+/* dispostion text card */
 .back-face {
   text-align: center;
   background-color: #2a75bb;
@@ -222,9 +221,6 @@ export default {
   height: 40%;
 }
 
-h2 {
-  margin-top: 15px;
-}
 .para {
   margin-top: 5px;
   margin-left: 5px;
@@ -301,23 +297,9 @@ hr {
 }
 
 .me {
-  border: solid 1px black;
   display: flex;
-  background-color : #2a75bb;
-  /* width : 100%;
-  height: 100%; */
-  
-  /* width : 1100px; */
-  
-  /* display: flex; */
 }
-.flipped-card{
-   border: solid 1px rgb(219, 23, 23);
-  display: flex;
-  background-color: #42b883;
-  /* width : 100%;
-  height: 100%; */
-}
+
 /* .parcours {
   
   width: 50%;
@@ -340,13 +322,13 @@ hr {
   margin-left: 5%;
   margin-right: 5%;
 } */
-.who-am-i {
+/* .who-am-i {
   width: 50%;
   height: 400px;
   border: solid 1px black;
   margin-left: 15%;
   margin-top: 10%;
-}
+} */
 .glitch {
   margin-bottom: 20px;
   padding: 20px;
@@ -379,8 +361,9 @@ hr {
   width: 550px;
   min-height: 150px;
   line-height: 16px;
-  margin-top: 70%;
+  margin-top: 200px;
   margin-left: 30%;
+  margin-bottom: 100px;
   background: white;
   border: 1px solid white;
   box-shadow: 0 1px 0 1px black, inset 0 1px 0 1px black, 0 0 0 1px black,
