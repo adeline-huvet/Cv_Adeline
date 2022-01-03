@@ -143,22 +143,39 @@ export default {
 <style scoped>
 /* container principal */
 .about {
-  margin-top: 50px;
+  padding-top: 10px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
+  background-color: rgb(204, 206, 207);
+  
 }
+/* contenu card animé */
+.flipped-card {
+  margin-top: 10px;
+  display: flex;
+  height: 75vh;
+  
+}
+.me {
+    display: flex;
+    flex-direction: column;
+    justify-content :center;
+    vertical-align: middle;
+    align-items : center;
+    height: 100vh;
+    background-image: url('../../public/images/fond-about.jpg');
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: bottom 0% right 50%;
+    
+  }
 
 .who-title {
   font-family: "Italiana", serif;
   align-items: center;
   /* margin-top: 50px; */
-}
-/* contenu card animé */
-.flipped-card {
-  margin-top: 50px;
-  display: flex;
 }
 
 .Flipper {
@@ -249,6 +266,7 @@ export default {
   row-gap: 10px;
   column-gap: 10px;
 }
+  
 
 .humour {
   display: inline-block;
@@ -296,39 +314,6 @@ hr {
   margin-top: -2px;
 }
 
-.me {
-  display: flex;
-}
-
-/* .parcours {
-  
-  width: 50%;
-  height: 400px;
-  border: solid 1px black;
-  margin-left: 5%;
-  margin-top: 10%;
-  background-color: rgb(173, 170, 170);
-}
-.title-parcours{
-  font-family: 'Italianno', cursive;
-  text-align: center;
-  margin-top: 5%;
-  margin-bottom: 5%;
-}
-.text-parcours{
-  font-family: 'Vesper Libre', serif;
-  font-size: 0.95rem;
-  text-align: center;
-  margin-left: 5%;
-  margin-right: 5%;
-} */
-/* .who-am-i {
-  width: 50%;
-  height: 400px;
-  border: solid 1px black;
-  margin-left: 15%;
-  margin-top: 10%;
-} */
 .glitch {
   margin-bottom: 20px;
   padding: 20px;
@@ -361,9 +346,6 @@ hr {
   width: 550px;
   min-height: 150px;
   line-height: 16px;
-  margin-top: 200px;
-  margin-left: 30%;
-  margin-bottom: 100px;
   background: white;
   border: 1px solid white;
   box-shadow: 0 1px 0 1px black, inset 0 1px 0 1px black, 0 0 0 1px black,
