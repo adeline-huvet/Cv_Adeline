@@ -22,6 +22,7 @@
           :erase-on-complete="false"
           caret-animation="blink"
         ></vue-typer>
+      
       </div>
 
       <div class="social-network">
@@ -40,7 +41,8 @@ export default {
   name: "Home",
   components: { 
       VueTyper
-      }
+      },
+     
 };
 </script>
 
@@ -63,7 +65,7 @@ h2{
   background-size: 100% 100%;
   top: 0;
   z-index: -10;
-  background-image: url("../../public/images/fond-home.png");
+  background-image: url("https://www.pokebip.com/membres/galeries/1545/1545149884015718400.png");
 }
 .main-container {
   display: flex;
