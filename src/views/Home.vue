@@ -1,14 +1,11 @@
 <template>
   <div class="home">
     <div class="main-container">
-      <div class="my-name">
         <h2>Adeline Huvet</h2>
-        </div> 
       <div class="title">
         <vue-typer class="text"
           :text="[
-            'Développeuse Web junior, Fullstack.',
-            ':)'  
+            'Développeuse Web junior, Fullstack.',  
           ]"
         
           :repeat="Infinity"
@@ -52,9 +49,34 @@ export default {
   margin-right: 80%;
   margin-top: -8%;
 } */
+
+@media screen and (max-width: 900px) {
+
+  h2{
+   transform: translateY(5.5rem);
+   margin-right: auto;
+   margin-left: 20px;
+  }
+  .title{
+    margin-right: auto;
+    margin-left: 20px;
+    transform: translateY(40px);
+  }
+  .vue-typer, .custom.char{
+    font-size: 2px;
+    
+  }
+  .social-network{
+    left: 30%;
+    position: absolute;
+    bottom: 40px;
+  }
+}
 h2{
   font-family: 'Italiana', serif;
   font-size: 300%;
+  margin-right: 52rem;
+  margin-top: -5rem;
   
 }
 
@@ -69,6 +91,8 @@ h2{
 }
 .main-container {
   display: flex;
+  flex-wrap: wrap;
+  /* position: relative; */
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -80,10 +104,13 @@ h2{
     font-family: 'Rambla', sans-serif;
     font-size: 3.5rem;
     
-    
 }
 .text {
   color: #607D8B;
+  
+}
+.title{
+  margin-top: 70px;
 }
 .network-group{
     list-style: none;
@@ -93,27 +120,29 @@ h2{
     display: inline-block;
     margin: 7px;
     color: #171515;
-    opacity: 70%;    
+    opacity: 70%;
+    transition: all 0.5s ease-out;    
 }
 .network-item-link{
    display: inline-block;
     margin: 7px;
     color:  #0e76a8;
     opacity: 70%;
+    transition: all 1s ease-out;
 }
 .network-item-git:hover{
   display: inline-block;
     margin-right: 35px;
     color:  #dbdbdb;
     transform:scale(2,2);
-    transition: all 0.5s ease-out;
+    transition: all 1s ease-in;
 } 
 .network-item-link:hover{
   display: inline-block;
     margin-left: 35px;
     color:  #dbdbdb;
     transform:scale(2,2);
-    transition: all 0.5s ease-out;
+    transition: all 1s ease-in;
 }
 
 </style>

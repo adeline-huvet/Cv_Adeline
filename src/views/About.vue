@@ -7,9 +7,8 @@
         height="380px"
         :flipped="!flipped"
         @click="onClick"
-        class="card"
+        
       >
-
         <div slot="front" class="front-face">
           <div class="para">
             <p>Adibou</p>
@@ -33,6 +32,8 @@
               </li>
             <p/>
 
+            
+
             <p class="motivation">
               Motivation :
               <li class="smile-emoji">
@@ -43,6 +44,8 @@
               </li>
             <p/>
 
+           
+
             <p class="team-play">
               Teamplay :
               <li class="hand-emoji">
@@ -50,15 +53,15 @@
                 ><i class="far fa-handshake"></i
                 ><i class="far fa-handshake"></i>
               </li>
-            <p/>
+           
 
+            <p />
           </div>
           <hr />
           <div class="card-descript">
             Pokémon de type junior qui serai ravis de vous rejoindre pour plus
             projet. Idéal contre la team rocket.
           </div>
-
         </div>
         <div slot="back" class="back-face">
           <span class="click-me">Click me !</span>
@@ -77,7 +80,6 @@
       <div class="no-glitch" v-if="flipped">
         <Glitch text="No" color="steelblue"></Glitch>
       </div>
-
     </div>
 
     <div class="me" id="about-me" v-if="flipped">
@@ -116,13 +118,13 @@ export default {
     ParcoursTitre,
     MoiTitle,
     MoiP1,
-    MoiP2
+    MoiP2,
   },
 
   data() {
     return {
       flipped: false,
-      count: 0
+      count: 0,
     };
   },
   methods: {
@@ -136,11 +138,63 @@ export default {
       }
 
       console.log(this.count);
-    }
-  }
+    },
+  },
 };
 </script>
 <style scoped>
+@media screen and (max-width: 1024px) {
+  /* container principal */
+  
+  /* contenu card animé */
+   .flipped-card{
+     display: flex;
+     /* position: relative; */
+     flex-wrap: wrap;
+     align-items: center;
+     vertical-align: middle;
+     justify-content: center;
+     flex-wrap: wrap;
+     width: 100%;
+     height: 100%;
+     
+   }
+  .Flipper, .back-face, .front-face{
+  /* transform: translateX(-50%); */
+  /* width :250px; */
+  /* min-width: 200px; */
+  
+  min-width :250px;
+  /* min-width: 80%; */
+  margin-left: -35%;
+  margin-top : 2%;
+  flex-shrink: 1;
+  
+   
+  }
+  .Flipper{
+    position: relative;
+  display: flex;
+  width:100%;
+  }
+  
+
+.me {
+  background-size: 100% !important;
+  background-position: center !important;
+  
+}
+  .who-title {
+     width: 100%;
+  }
+  .glitch-box, .yes-glitch, .no-glitch {
+  display: none;
+}
+.box{
+  width: 80%;
+ 
+}
+}
 /* container principal */
 .about {
   padding-top: 10px;
@@ -149,32 +203,32 @@ export default {
   flex-wrap: wrap;
   justify-content: center;
   background-color: rgb(204, 206, 207);
-  
 }
 /* contenu card animé */
 .flipped-card {
   margin-top: 10px;
   display: flex;
   height: 75vh;
-  
 }
+
 .me {
-    display: flex;
-    flex-direction: column;
-    justify-content :center;
-    vertical-align: middle;
-    align-items : center;
-    height: 100vh;
-    background-image: url('../../public/images/fond-about.jpg');
-    background-repeat: no-repeat;
-    background-size: 70%;
-    background-position: bottom 0% right 50%;
-    
-  }
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  vertical-align: middle;
+  align-items: center;
+  height: 100vh;
+  background-image: url("../../public/images/fond-about.jpg");
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-position: bottom 0% right 50%;
+}
 
 .who-title {
   font-family: "Italiana", serif;
   align-items: center;
+  width: 100%;
   /* margin-top: 50px; */
 }
 
@@ -183,7 +237,7 @@ export default {
   margin-left: 40%;
   margin-bottom: 60px;
   border-radius: 15px;
-  box-shadow: 10px 5px 5px rgb(163, 163, 163);
+  /* box-shadow: 10px 5px 5px rgb(163, 163, 163); */
   transition: all 1s ease-out;
 }
 
@@ -204,7 +258,7 @@ export default {
   height: 100%;
   border: 7px solid #ffcb05;
   border-radius: 15px;
-  box-shadow: 10px 5px 5px rgb(163, 163, 163);
+  /* box-shadow: 10px 5px 5px rgb(163, 163, 163); */
 }
 
 .front-face {
@@ -217,7 +271,7 @@ export default {
   height: 100%;
   border: 7px solid #ffcb05;
   border-radius: 15px;
-  box-shadow: 10px 5px 5px rgb(163, 163, 163);
+  /* box-shadow: 10px 5px 5px rgb(163, 163, 163); */
 }
 
 .back-face .click-me {
@@ -266,7 +320,6 @@ export default {
   row-gap: 10px;
   column-gap: 10px;
 }
-  
 
 .humour {
   display: inline-block;
@@ -288,7 +341,7 @@ export default {
 .laught-emoji {
   list-style: none;
   display: inline-block;
-  margin-left: 10px;
+  margin-left: 20px;
   letter-spacing: 2px;
 }
 .smile-emoji {
@@ -343,7 +396,7 @@ hr {
 .box {
   border-radius: 2px;
   padding: 8px;
-  width: 550px;
+  width: 60%;
   min-height: 150px;
   line-height: 16px;
   background: white;
@@ -359,10 +412,5 @@ hr {
   margin-top: 23px;
   animation: bounce 0.5s ease-in-out 0 infinite alternate;
   float: right;
-}
-.parcours-p1 {
-  margin-left: 5px;
-  margin-right: 25px;
-  text-overflow: fade(10px);
 }
 </style>
