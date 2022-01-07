@@ -9,7 +9,6 @@
       :type-delay="30"
       caret-animation="blink"
     ></vue-typer>
-    <h3 class="title-who-am-i">Moi pokemon de type dev</h3>
   </div>
 </template>
 

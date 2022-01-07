@@ -70,15 +70,15 @@
       </flipper>
 
       <div class="glitch-box" v-if="flipped">
-        <Glitch text="Would you like to continue ?" color="tomato"></Glitch>
+        <Glitch text="Would you like to continue ?" color="tomato" background="rgb(207, 203, 203)"></Glitch>
       </div>
 
       <div class="yes-glitch" v-if="flipped">
-        <a href="#about-me"><Glitch text="Yes" color="steelblue"></Glitch></a>
+        <a href="#about-me"><Glitch text="Yes" color="steelblue" background="rgb(207, 203, 203)"></Glitch></a>
       </div>
 
       <div class="no-glitch" v-if="flipped">
-        <Glitch text="No" color="steelblue"></Glitch>
+        <Glitch text="No" color="steelblue" background="rgb(207, 203, 203)"></Glitch>
       </div>
     </div>
 
@@ -202,7 +202,7 @@ export default {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: rgb(204, 206, 207);
+  background-color: rgb(207, 203, 203);
 }
 /* contenu card animé */
 .flipped-card {

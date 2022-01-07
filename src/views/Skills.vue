@@ -29,13 +29,13 @@ export default {
     }
 }
  const skills = [ 
-        { id: 1, title: 'Javascript', img: require('../../public/images/javascript.png'), where: 'En stage', comment: 'La première colère'},
+        { id: 1, title: 'Javascript', img: require('../../public/images/javascript.png'), where: 'En formation', comment: 'La première colère'},
         { id: 2, title: 'React.js', img:  require('../../public/images/react.png'), where: 'En stage', comment: 'Amour and passion by React'},
         { id: 3, title: 'Next.js', img:  require('../../public/images/nextjs.png'), where: 'Sur mon temps libre', comment: `Le framework d'un framework`},
         { id: 4, title: 'Vue.js', img:  require('../../public/images/vue.png'), where: 'Sur mon temps libre', comment: 'Passion en Vue !'},
         { id: 5, title: 'PHP', img:  require('../../public/images/php.png'), where: 'En formation', comment: 'Découverte du côté obscure'},
         { id: 6, title: 'Symfony', img:  require('../../public/images/symfony.png'), where: 'En formation', comment: 'What the hell ?'},
-        { id: 7, title: 'MySql', img:  require('../../public/images/mysql.png'), where: 'En formation', comment: 'INSERT INTO user'},
+        { id: 7, title: 'MySql', img:  require('../../public/images/mysql.png'), where: 'En formation', comment: 'INSERT knowledge INTO user'},
 
         
        
