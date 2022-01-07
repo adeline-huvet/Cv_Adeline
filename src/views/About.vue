@@ -145,7 +145,13 @@ export default {
 <style scoped>
 @media screen and (max-width: 1024px) {
   /* container principal */
-  
+  .about{
+    /* ajout d une taille fixe et tout ce qui depasse en hidden */
+    /* le probleme ne venai pas de la shadow */
+    /* mais du fonctionnement du flipper en lui meme */
+    width: 100vw;
+    overflow: hidden;
+  }
   /* contenu card animé */
    .flipped-card{
      display: flex;
@@ -160,17 +166,20 @@ export default {
      
    }
   .Flipper, .back-face, .front-face{
-  /* transform: translateX(-50%); */
-  /* width :250px; */
-  /* min-width: 200px; */
-  
+  /* transform: translateX(-50%);
+  width :250px;
+  min-width: 200px; */
+  /* display: none; */
   min-width :250px;
   /* min-width: 80%; */
   margin-left: -35%;
   margin-top : 2%;
   flex-shrink: 1;
-  
-   
+  }
+  .back-face, .front-face{
+    position: absolute;
+    top: 30px;
+    left: 10px;
   }
   .Flipper{
     position: relative;
