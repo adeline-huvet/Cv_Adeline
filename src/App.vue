@@ -1,7 +1,9 @@
 <template>
   <div id="app">
    <Navbar/>
+   <vue-page-transition name="flip-y">
    <router-view></router-view>
+   </vue-page-transition>
   </div>
 </template>
 

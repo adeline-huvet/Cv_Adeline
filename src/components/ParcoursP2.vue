@@ -2,7 +2,7 @@
   <div class="parcours">
     <vue-typer
       :text="[
-        `De mon diplôme dans la santé et le social, en passant par la restauration ou encore la réserve opérationnelle de la Marine, j'ai fais du chemin avant d'enfin commencer la merveilleuse aventure de la programmation. Celle ci à débuté grâce à l'AFPA, en effet j'ai eu l'occasion d'être admise dans la formation: 'Developpeur Web, Web mobile' et ça a changer ma vie ! Mais comme j'ai dis que quelque ligne et que je suis sympa, je voudrais pas trop te spoiler je te laisse me contacter pour plus d'information. `,
+        `De mon diplôme dans la santé et le social, en passant par la restauration ou encore la réserve opérationnelle de la Marine, j'ai fait du chemin avant d'enfin commencer la merveilleuse aventure de la programmation. Celle-ci a débuté grâce à l'AFPA. En effet j'ai eu l'occasion d'être admise dans la formation: 'Développeur Web, Web mobile' et ça a changé ma vie ! Mais comme j'ai dit que ce ne serait que quelques lignes et que je suis sympa, je ne voudrais pas trop te spoiler et je te laisse me contacter pour plus d'informations.`
       ]"
       :repeat="0"
       :shuffle="false"

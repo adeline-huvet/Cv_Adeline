@@ -24,8 +24,8 @@
 
       <div class="social-network">
         <ul class="network-group">
-             <a href="https://fontawesome.com/v5.15/icons/linkedin?style=brands"><li class="network-item-git"><i class="fab fa-github fa-3x"> </i></li></a>
-            <a href="https://fontawesome.com/v5.15/icons/linkedin?style=brands"><li class="network-item-link"><i class="fab fa-linkedin fa-3x"></i></li></a>
+             <a href="https://github.com/adeline-huvet"><li class="network-item-git"><i class="fab fa-github fa-3x"> </i></li></a>
+            <a href="https://www.linkedin.com/in/adeline-huvet-a0640b20a/?originalSubdomain=fr"><li class="network-item-link"><i class="fab fa-linkedin fa-3x"></i></li></a>
         </ul>
       </div>
     </div>
@@ -44,11 +44,6 @@ export default {
 </script>
 
 <style scoped>
-
-/* .my-name{
-  margin-right: 80%;
-  margin-top: -8%;
-} */
 
 @media screen and (max-width: 900px) {
 
@@ -87,7 +82,7 @@ h2{
   background-size: 100% 100%;
   top: 0;
   z-index: -10;
-  background-image: url("https://www.pokebip.com/membres/galeries/1545/1545149884015718400.png");
+  background-image: url("../../public/images/fond-home.png");
 }
 .main-container {
   display: flex;

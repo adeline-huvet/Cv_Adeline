@@ -9,17 +9,19 @@ import 'bootstrap-vue/dist/bootstrap-vue.css';
 import 'vue-flipper/dist/vue-flipper.css';
 import Flipper from 'vue-flipper';
 import VueTyperPlugin from 'vue-typer'
-//import Glitch from 'vue-glitch';
+import VuePageTransition from 'vue-page-transition'
+
 
 
 
 
 Vue.config.productionTip = false
-Vue.use(BootstrapVue)
-Vue.use(IconsPlugin)
+Vue.use(BootstrapVue);
+Vue.use(IconsPlugin);
 Vue.component('flipper', Flipper);
 Vue.use(VueTyperPlugin);
-//Vue.component('glitch', Glitch);
+Vue.use(VuePageTransition);
+
 
 
 new Vue({

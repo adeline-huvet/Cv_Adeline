@@ -1,6 +1,6 @@
 <template>
   <div class="about-skill">
-    <h1 class="h1-title">Skills</h1>
+    <h1 class="h1-title text-secondary">Skills</h1>
     <div class="all-card">
       <div v-for="skill in skills" v-bind:key="skill.id" class="card-item">
       <div class="image">
@@ -45,9 +45,6 @@ export default {
 </script>
 
 <style scoped>
-body{
-  
-}
 .container{ 
    display : flex;
   align-items : center;
@@ -69,6 +66,7 @@ body{
 .h1-title{
    font-family: 'Italiana', serif;
    text-align: center;
+   /* color: rgb(116, 116, 116) */
   
 
    
@@ -144,7 +142,6 @@ img{
 
 
 .title{
-  /* margin-left: 20%; */
    text-align: center;
    margin-top: -15px;
    font-family: 'Luxurious Roman', cursive;

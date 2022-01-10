@@ -18,7 +18,7 @@
           <div>
             <img
               class="img-profile"
-              src="http://www.avatarsinpixels.com/minipix/eyJIYWlyTG93ZXIiOiI1IiwiTW91dGgiOiI2IiwiUGFudHMiOiIxIiwiVG9wIjoiMTIiLCJHbGFzc2VzIjoiMyIsImhhaXJUb25lIjoiZmZlMTZjIn0=/1/show.png"
+              src="../../public/images/photo-profile.jpg"
             />
           </div>
 
@@ -74,11 +74,13 @@
       </div>
 
       <div class="yes-glitch" v-if="flipped">
-        <a href="#about-me"><Glitch text="Yes" color="steelblue" background="rgb(207, 203, 203)"></Glitch></a>
+        <a href="#about-me" class="link-glitch"><Glitch text="Yes" color="steelblue" background="rgb(207, 203, 203)"></Glitch></a>
       </div>
 
       <div class="no-glitch" v-if="flipped">
+        <b-link class="link-glitch" :to="{path: '/'}">
         <Glitch text="No" color="steelblue" background="rgb(207, 203, 203)"></Glitch>
+        </b-link>
       </div>
     </div>
 
@@ -136,8 +138,6 @@ export default {
       if (this.count > 5) {
         return (this.count = 0);
       }
-
-      console.log(this.count);
     },
   },
 };
@@ -155,7 +155,6 @@ export default {
   /* contenu card animé */
    .flipped-card{
      display: flex;
-     /* position: relative; */
      flex-wrap: wrap;
      align-items: center;
      vertical-align: middle;
@@ -166,12 +165,7 @@ export default {
      
    }
   .Flipper, .back-face, .front-face{
-  /* transform: translateX(-50%);
-  width :250px;
-  min-width: 200px; */
-  /* display: none; */
   min-width :250px;
-  /* min-width: 80%; */
   margin-left: -35%;
   margin-top : 2%;
   flex-shrink: 1;
@@ -218,6 +212,7 @@ export default {
   margin-top: 10px;
   display: flex;
   height: 75vh;
+  margin-bottom: 15px;
 }
 
 .me {
@@ -238,7 +233,7 @@ export default {
   font-family: "Italiana", serif;
   align-items: center;
   width: 100%;
-  /* margin-top: 50px; */
+ 
 }
 
 .Flipper {
@@ -246,7 +241,6 @@ export default {
   margin-left: 40%;
   margin-bottom: 60px;
   border-radius: 15px;
-  /* box-shadow: 10px 5px 5px rgb(163, 163, 163); */
   transition: all 1s ease-out;
 }
 
@@ -267,7 +261,7 @@ export default {
   height: 100%;
   border: 7px solid #ffcb05;
   border-radius: 15px;
-  /* box-shadow: 10px 5px 5px rgb(163, 163, 163); */
+  
 }
 
 .front-face {
@@ -280,7 +274,7 @@ export default {
   height: 100%;
   border: 7px solid #ffcb05;
   border-radius: 15px;
-  /* box-shadow: 10px 5px 5px rgb(163, 163, 163); */
+  
 }
 
 .back-face .click-me {
@@ -316,10 +310,14 @@ export default {
   margin-right: 5px;
 }
 .img-profile {
-  margin-top: -10px;
-  margin-left: 4%;
-  width: 100px;
-  height: 100px;
+  margin-top: -5px;
+  margin-bottom: -40px;
+  left: 32.5%;
+  width: auto;
+  height: 150px;
+  position: relative;
+  overflow: auto;
+  clip-path:circle(30% at 55% 37.5%);
 }
 .soft-skills {
   margin-top: 15px;
@@ -400,6 +398,9 @@ hr {
   position: absolute;
   top: 300px;
   right: 150px;
+}
+.link-glitch{
+  text-decoration: none;
 }
 
 .box {
