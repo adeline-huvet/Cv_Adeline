@@ -247,7 +247,7 @@ export default {
 .Flipper:hover {
   transform: scale(1.1, 1.1);
   transition: all 1s ease-in;
-  opacity: 80%;
+  /* opacity: 80%; */
 }
 
 /* dispostion text card */
