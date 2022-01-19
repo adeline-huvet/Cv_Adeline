@@ -59,8 +59,8 @@
           </div>
           <hr />
           <div class="card-descript">
-            Pokémon de type junior qui serai ravis de vous rejoindre pour plus
-            de projet. Idéal contre la team rocket.
+            Pokémon de type junior qui serait ravie de vous rejoindre pour plus
+            de projets. Idéale contre la team rocket.
           </div>
         </div>
         <div slot="back" class="back-face">

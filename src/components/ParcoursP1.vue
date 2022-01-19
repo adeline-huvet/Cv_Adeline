@@ -22,7 +22,7 @@ export default {
   data() {
     return{    
       
-      text: [ `Bonjour à toi cher(e) recruteur(euse) ! Tu te demandes sûrement: "Mais quel est ce Pokémon ?" et tel Pikachu faisant son attaque Éclair, je vais te résumer en quelque ligne mon parcours atypique. Diplômée d'un bac dans la santé et le social, j'ai eu l'occasion, et je dirais même la chance, de travailler et de découvrir différents secteurs d'activité.
+      text: [ `Bonjour à toi cher(e) recruteur(euse) ! Tu te demandes sûrement: "Mais quel est ce Pokémon ?" et tel Pikachu faisant son attaque Éclair, je vais te résumer en quelques lignes mon parcours atypique. Diplômée d'un bac dans la santé et le social, j'ai eu l'occasion, et je dirais même la chance, de travailler et de découvrir différents secteurs d'activité.
 `
 ] 
 
